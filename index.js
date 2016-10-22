@@ -36,7 +36,7 @@ let cardInsertStream = Observable.combineLatest(cardDropStream, cardStream)
 Observable.merge(setInsertStream, cardInsertStream)
   .subscribe(
     () => { },
-    log.error,
+    log.error.bind(log),
     () => {
       dbStream.subscribe((db) => db.close());
       log.info('Done.')
