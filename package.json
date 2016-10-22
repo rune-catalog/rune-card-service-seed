@@ -1,0 +1,21 @@
+{
+  "name": "rune-cards-service-seed",
+  "version": "1.0.0",
+  "description": "Imports all card definitions from an mtgjson archive. After running the script, you'll have two collections set up in your mongodb database:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js | node_modules/.bin/bunyan"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "bunyan": "^1.8.3",
+    "config": "^1.21.0",
+    "mongodb": "^2.2.11",
+    "rx": "^4.1.0",
+    "stream-json": "^0.4.2",
+    "tmp": "0.0.29",
+    "unzip": "^0.1.11"
+  }
+}

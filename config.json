@@ -1,0 +1,5 @@
+{
+  "db": "mongodb://mongo/rune",
+  "setSource": "http://mtgjson.com/json/AllSets-x.json.zip",
+  "cardSource": "http://mtgjson.com/json/AllCards-x.json.zip"
+}
