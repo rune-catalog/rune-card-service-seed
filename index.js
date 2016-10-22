@@ -1,14 +1,14 @@
 'use strict';
 
 const config = require('./config.json'),
-  extractor  = require('./file-extractor'),
-  downloader = require('./file-downloader'),
-  db         = require('./db'),
+  extractor  = require('./src/file-extractor'),
+  downloader = require('./src/file-downloader'),
+  db         = require('./src/db'),
   Observable = require('rx').Observable,
-  cardParser = require('./card-parser'),
-  setParser  = require('./set-parser'),
-  dbDrop     = require('./db-drop'),
-  dbInsert   = require('./db-insert'),
+  cardParser = require('./src/card-parser'),
+  setParser  = require('./src/set-parser'),
+  dbDrop     = require('./src/db-drop'),
+  dbInsert   = require('./src/db-insert'),
   bunyan     = require('bunyan');
 
 const SET_COLLECTION = 'sets',

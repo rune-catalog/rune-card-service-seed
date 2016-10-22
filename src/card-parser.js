@@ -14,11 +14,13 @@ module.exports = (filePath) => {
     stream.output.on('error', subscriber.onError.bind(subscriber));
 
     stream.output.on('data', (object) => {
-      log.info(`Parsed card ${object.key}`);
       subscriber.onNext(object.value);
     });
 
-    stream.output.on('end', subscriber.onCompleted.bind(subscriber));
+    stream.output.on('end', () => {
+      log.info(`Parsed all cards`);
+      subscriber.onCompleted();
+    }
 
     fs.createReadStream(filePath)
       .pipe(stream.input);
